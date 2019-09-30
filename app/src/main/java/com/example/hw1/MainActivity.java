@@ -242,6 +242,12 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
      * Solution: I implemented the methods given.
      */
 
+    /** External Citation
+     * Date: September 30, 2019
+     * Problem: I need to use onClick for updating SeekBar values.
+     * Source: Stephen Nguyen
+     * Solution: Use a similar process in onCheckedChanged().
+     */
     /**
      * Recalls randomize to set new colors.
      * Also updates SeekBars and Spinner accordingly.
