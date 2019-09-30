@@ -30,13 +30,13 @@ public class Face extends SurfaceView implements SeekBar.OnSeekBarChangeListener
         AdapterView.OnItemSelectedListener, RadioGroup.OnCheckedChangeListener,
         View.OnClickListener{
     // For setting up colors
-    private int skinColor;
-    private int eyeColor;
-    private int hairColor;
-    private int hairStyle;
-    private Paint skinPaint = new Paint();
-    private Paint eyePaint = new Paint();
-    private Paint hairPaint = new Paint();
+    int skinColor;
+    int eyeColor;
+    int hairColor;
+    int hairStyle;
+    Paint skinPaint = new Paint();
+    Paint eyePaint = new Paint();
+    Paint hairPaint = new Paint();
 
     // RGB values
     int skinRed;
@@ -322,9 +322,11 @@ public class Face extends SurfaceView implements SeekBar.OnSeekBarChangeListener
      * @param checkedId: the ID of the RadioButton
      */
     public void onCheckedChanged(RadioGroup group, int checkedId) {
+        //SeekBar test = (SeekBar) findViewById(R.id.redValue); // Causes crash? (NullException)
         RadioButton rb = (RadioButton) group.findViewById(checkedId);
         if(rb.getText().equals("Hair")) {
             checked = 1;
+            //test.setProgress(hairRed); // Causes crash?
         }
         else if(rb.getText().equals("Eyes")) {
             checked = 2;
